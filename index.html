@@ -12,39 +12,174 @@
         <ul>
             <li><a href="#home">首页</a></li>
             <li><a href="#about">关于</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#blog">博客</a></li>
             <li><a href="#contact">联系</a></li>
         </ul>
     </nav>
 
     <main>
-        <div class="card" id="greeting-card">
-            <h2><i class="fas fa-sun"></i> <span id="greeting">你好！</span></h2>
-            <div class="time-display" id="time">00:00:00</div>
-            <p>欢迎访问我的个人主页</p>
-            <button class="button" id="theme-toggle">
-                <i class="fas fa-paint-brush"></i> 换个颜色
-            </button>
-        </div>
+        <!-- 欢迎区域 -->
+        <section id="home">
+            <div class="card" id="greeting-card">
+                <h2><i class="fas fa-sun"></i> <span id="greeting">你好！</span></h2>
+                <div class="time-display" id="time">00:00:00</div>
+                <p class="lead">前端开发工程师 / UI设计师 / 开源爱好者</p>
+                <button class="button" id="theme-toggle">
+                    <i class="fas fa-paint-brush"></i> 换个颜色
+                </button>
+            </div>
+        </section>
 
-        <div class="card">
-            <h2><i class="fas fa-user"></i> 关于我</h2>
-            <p>这是一个示例页面，展示了基本的HTML、CSS和JavaScript的使用。</p>
-            <a href="#" class="button">了解更多</a>
-        </div>
+        <!-- 关于我 -->
+        <section id="about">
+            <h2 class="section-title"><i class="fas fa-user"></i> 关于我</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="头像" class="avatar">
+                    <h3>个人简介</h3>
+                    <p>热爱编程和设计的前端开发者，专注于创建优秀的用户体验。喜欢探索新技术，乐于分享技术经验。</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-graduation-cap"></i> 教育经历</h3>
+                    <ul class="timeline">
+                        <li>
+                            <span class="year">2018-2022</span>
+                            <p>计算机科学与技术 - XX大学</p>
+                        </li>
+                        <li>
+                            <span class="year">2022-至今</span>
+                            <p>软件工程硕士 - XX大学</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-        <div class="card">
-            <h2><i class="fas fa-code"></i> 我的技能</h2>
-            <p>HTML5 / CSS3 / JavaScript</p>
-            <div class="button" id="skill-button">查看技能</div>
-        </div>
+        <!-- 技能展示 -->
+        <section id="skills">
+            <h2 class="section-title"><i class="fas fa-code"></i> 专业技能</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>前端开发</h3>
+                    <div class="skill-bar">
+                        <div class="skill-item">
+                            <span>HTML5/CSS3</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 90%">90%</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 85%">85%</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Vue.js</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 80%">80%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>其他技能</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Webpack</span>
+                        <span class="tag">UI设计</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目展示 -->
+        <section id="projects">
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i> 项目展示</h2>
+            <div class="card-grid">
+                <div class="card project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="项目截图">
+                    <h3>个人博客系统</h3>
+                    <p>基于Vue.js和Node.js的现代化博客系统，支持Markdown编辑和实时预览。</p>
+                    <div class="project-links">
+                        <a href="#" class="button"><i class="fab fa-github"></i> 源码</a>
+                        <a href="#" class="button">演示</a>
+                    </div>
+                </div>
+                <div class="card project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="项目截图">
+                    <h3>在线笔记工具</h3>
+                    <p>一个简洁的在线笔记应用，支持多人协作和实时同步。</p>
+                    <div class="project-links">
+                        <a href="#" class="button"><i class="fab fa-github"></i> 源码</a>
+                        <a href="#" class="button">演示</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 博客文章 -->
+        <section id="blog">
+            <h2 class="section-title"><i class="fas fa-blog"></i> 最新博客</h2>
+            <div class="card-grid">
+                <div class="card blog-card">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> 2024-01-15</span>
+                        <span><i class="far fa-eye"></i> 1234</span>
+                    </div>
+                    <h3>Vue3 组合式API最佳实践</h3>
+                    <p>探讨Vue3组合式API的使用技巧和常见陷阱...</p>
+                    <a href="#" class="button">阅读更多</a>
+                </div>
+                <div class="card blog-card">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> 2024-01-10</span>
+                        <span><i class="far fa-eye"></i> 956</span>
+                    </div>
+                    <h3>现代CSS技巧分享</h3>
+                    <p>分享一些实用的CSS技巧和新特性应用...</p>
+                    <a href="#" class="button">阅读更多</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系方式 -->
+        <section id="contact">
+            <h2 class="section-title"><i class="fas fa-envelope"></i> 联系我</h2>
+            <div class="card contact-card">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="button">发送消息</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>© 2024 我的个人主页</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="微博"><i class="fab fa-weibo"></i></a>
+            </div>
+            <p>© 2024 我的个人主页 | <a href="#" class="footer-link">简历下载</a></p>
         </div>
     </footer>
     <script src="js/script.js"></script>

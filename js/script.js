@@ -87,4 +87,71 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
         }
     });
+
+    // 添加表单提交处理
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // 这里添加表单提交逻辑
+            alert('消息已发送！（示例）');
+            contactForm.reset();
+        });
+    }
+
+    // 添加技能进度条动画
+    const progressBars = document.querySelectorAll('.progress-bar');
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const width = entry.target.getAttribute('style').match(/width: (\d+)%/)[1];
+                entry.target.style.width = '0%';
+                setTimeout(() => {
+                    entry.target.style.width = width + '%';
+                }, 100);
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+        threshold: 0.5
+    });
+
+    progressBars.forEach(bar => observer.observe(bar));
+
+    // 添加平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // 添加导航栏高亮
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (window.pageYOffset >= sectionTop - 60) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').slice(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    });
 }); 
