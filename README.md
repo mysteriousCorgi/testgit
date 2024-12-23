@@ -25,17 +25,6 @@
   - DOM操作
   - Intersection Observer API
 
-## 目录结构
-
-project/
-│
-├── index.html # 主页面
-├── css/
-│ └── style.css # 样式文件
-├── js/
-│ └── script.js # JavaScript脚本
-└── README.md # 项目说明文档
-
 
 
 ## 功能模块说明
